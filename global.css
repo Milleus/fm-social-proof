@@ -210,7 +210,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-.container > .main-layout {
+.container > .content-layout {
   grid-area: main;
   --grid-gap: 3rem;
   max-width: 69.375rem;
@@ -221,7 +221,6 @@ h1 {
   align-self: end;
 }
 
-/* intro */
 .intro > h1 {
   letter-spacing: -1.14px;
   max-width: 12ch;
@@ -230,11 +229,11 @@ h1 {
 
 .intro > p {
   letter-spacing: -0.5px;
+  max-width: 35ch;
   margin-top: 1.125rem;
 }
 
-/* ratings */
-section.ratings > .rating {
+.ratings > .rating {
   flex-direction: column;
   border-radius: 8px;
   padding: 1rem;
@@ -242,21 +241,20 @@ section.ratings > .rating {
   margin-inline: auto;
 }
 
-section.ratings > .rating .stars {
+.ratings > .rating .stars {
   --flex-gap: 0.5rem;
   justify-content: center;
 }
 
-section.ratings > .rating p {
+.ratings > .rating p {
   line-height: 1.12;
 }
 
-/* testimonials */
-section.testimonials {
+.testimonials {
   flex-direction: column;
 }
 
-section.testimonials > .testimonial {
+.testimonials > .testimonial {
   --grid-gap: 1.5rem;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -266,18 +264,18 @@ section.testimonials > .testimonial {
   margin-inline: auto;
 }
 
-section.testimonials > .testimonial > img {
+.testimonials > .testimonial > img {
   grid-column: 1 / 2;
   border-radius: 50%;
   aspect-ratio: 1;
   width: 2.5rem;
 }
 
-section.testimonials > .testimonial > header {
+.testimonials > .testimonial > header {
   grid-column: 2 / 3;
 }
 
-section.testimonials > .testimonial > p {
+.testimonials > .testimonial > p {
   grid-column: 1 / -1;
   letter-spacing: -0.23px;
 }
@@ -288,11 +286,11 @@ section.testimonials > .testimonial > p {
       url(/assets/bg-pattern-bottom-desktop.svg);
   }
 
-  .container > .main-layout {
+  .container > .content-layout {
+    --grid-gap: 4.5rem;
     grid-template-columns: 1fr 1fr;
   }
 
-  /* intro */
   .intro {
     grid-column: 1 / 2;
   }
@@ -302,13 +300,12 @@ section.testimonials > .testimonial > p {
     margin-inline: unset;
   }
 
-  /* ratings */
-  section.ratings {
+  .ratings {
     grid-column: 2 / 3;
     align-self: center;
   }
 
-  section.ratings > .rating {
+  .ratings > .rating {
     --flex-gap: 2rem;
     flex-direction: row;
     align-items: center;
@@ -316,36 +313,35 @@ section.testimonials > .testimonial > p {
     padding: 1.25rem 2rem;
   }
 
-  section.ratings > .rating:first-of-type {
+  .ratings > .rating:first-of-type {
     margin-inline: 0 auto;
   }
 
-  section.ratings > .rating:last-of-type {
+  .ratings > .rating:last-of-type {
     margin-inline: auto 0;
   }
 
-  /* testimonials */
-  section.testimonials {
+  .testimonials {
     grid-column: 1 / -1;
     --flex-gap: 1.875rem;
     flex-direction: row;
   }
 
-  section.testimonials > .testimonial {
+  .testimonials > .testimonial {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 21.875rem;
   }
 
-  section.testimonials > .testimonial:nth-child(1) {
+  .testimonials > .testimonial:nth-child(1) {
     margin-block: 0 2rem;
   }
 
-  section.testimonials > .testimonial:nth-child(2) {
+  .testimonials > .testimonial:nth-child(2) {
     margin-block: 1rem;
   }
 
-  section.testimonials > .testimonial:nth-child(3) {
+  .testimonials > .testimonial:nth-child(3) {
     margin-block: 2rem 0;
   }
 }
